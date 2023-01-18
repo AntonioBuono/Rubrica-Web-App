@@ -1,0 +1,48 @@
+
+.formCenter{
+  margin: auto;
+  height: 800px;
+}
+
+
+form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.title{
+  color: black;
+  font-weight:bold;
+}
+
+.card-white{
+  width: 400px;
+  background-color: white;
+}
+mat-card-content{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+button.bottoni {
+  background-color: rgba(255, 238, 0, 0.733);
+}
+.container{
+  width: 400px;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: end;
+  margin-right: 10px;
+}

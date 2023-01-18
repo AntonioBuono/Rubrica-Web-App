@@ -1,0 +1,63 @@
+
+<div class="formCenter">
+  <form *ngIf="contactOld.id !=null; else aggiungi" [formGroup]="contactForm" (ngSubmit)="updateContact()">
+
+    <mat-card class="card-white">
+
+    <mat-card-content>
+      <div class="container"><button mat-raised-button class="bottoni"  type="submit">
+        <mat-icon fontIcon="reply" ></mat-icon>
+      </button></div>
+
+    <h1 class="title">{{titolo}}</h1>
+  <mat-form-field appearance="fill">
+    <mat-label>Nome</mat-label>
+    <input matInput type="text" name="nome"  formControlName="name">
+  </mat-form-field>
+  <mat-form-field appearance="fill">
+    <mat-label>Cognome</mat-label>
+    <input matInput type="text" name="cognome" formControlName="cognome">
+  </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Telefono Cellulare</mat-label>
+      <input matInput type="text" name="telefonoCellulare" formControlName="telefono">
+    </mat-form-field>
+    <div>
+    <button mat-raised-button class="bottoni"  type="submit">{{actionBtn}}</button>
+  </div>
+  </mat-card-content>
+  </mat-card>
+  </form>
+
+
+  <ng-template #aggiungi>
+    <form  [formGroup]="contactForm" (ngSubmit)="addContact()">
+      <mat-card class="card-white">
+
+        <mat-card-content>
+          <div class="container"><button mat-raised-button class="bottoni"  type="submit">
+            <mat-icon fontIcon="reply" ></mat-icon>
+          </button></div>
+        <h1 class="title">{{titolo}}</h1>
+      <mat-form-field appearance="fill">
+        <mat-label>Nome</mat-label>
+        <input matInput type="text" name="nome"  formControlName="name">
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Cognome</mat-label>
+        <input matInput type="text" name="cognome" formControlName="cognome">
+      </mat-form-field>
+        <mat-form-field appearance="fill">
+          <mat-label>Telefono Cellulare</mat-label>
+          <input matInput type="text" name="telefonoCellulare" formControlName="telefono">
+        </mat-form-field>
+        <div>
+        <button mat-raised-button  class="bottoni" type="submit">{{actionBtn}}</button>
+      </div>
+      </mat-card-content>
+      </mat-card>
+    </form>
+
+  </ng-template>
+</div>
+
